@@ -1,6 +1,7 @@
 import 'package:covid_tracker/pages/screens/home_screen.dart';
 import 'package:covid_tracker/theme/color/light_color.dart';
 import 'package:covid_tracker/theme/theme.dart';
+import 'package:covid_tracker/utils/Alertes.dart';
 import 'package:covid_tracker/utils/margin.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter/scheduler.dart';
@@ -82,14 +83,20 @@ class _HomeState extends State<Home> {
                 ),
               ),
               decoration: new BoxDecoration(
-                color: Colors.red,
+                color: Colors.blueGrey,
 
               ),
             ),
             // corps
 
             InkWell(
-              onTap: () {},
+              onTap: () async {
+                Navigator.of(context, rootNavigator: true).pop(
+                      await Navigator.push(context,
+                        MaterialPageRoute(builder: (context)=>Alertes())
+                      )
+                    );
+              },
               child: ListTile(
                 title: Text("Gerer les alarmes"),
                 leading: Icon(
@@ -169,7 +176,7 @@ class _HomeState extends State<Home> {
                     backgroundColor: CardColors.blue,
                   ),
                   GButton(
-                    icon: LineIcons.heart,
+                    icon: LineIcons.heartbeat,
                     text: 'Test',
                     backgroundColor: CardColors.green,
                   ),

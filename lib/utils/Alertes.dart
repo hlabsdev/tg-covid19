@@ -1,5 +1,8 @@
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
+import 'package:flutter_local_notifications/flutter_local_notifications.dart';
+
+
 
 class Alertes extends StatefulWidget {
   @override
@@ -22,6 +25,7 @@ class _AlertesState extends State<Alertes> {
         new AndroidInitializationSettings('app_icon');
     initialisationSettingsIOS = new IOSInitializationSettings(
         onDidReceiveLocalNotification: onDidReceiveLocalNotification);
+    initialisationSettings(initialisationSettingsAndroid, initialisationSettingsIOS);
   }
 
   Future onDidReceiveLocalNotification(
@@ -60,7 +64,11 @@ class SecondRoute extends StatelessWidget {
       appBar: AppBar(
         title: Text('Alertepage'),
       ),
-      
+      body: Center(child: RaisedButton(
+        child: Text('Go back'),
+        onPressed: (){
+        Navigator.pop(context);
+      }),),
     );
   }
 }
