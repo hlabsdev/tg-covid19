@@ -10,22 +10,15 @@ Elle permet à l'utilisateur d'être informé des evolutions de la pandemie, des
 
 ## ✨ Mise à jour
 - [x] Le rendre dynamique avec un backoffice
-- [x]
-
-## 📸 Screenshots
-
+- [x] Dans le menu guide ajouter des informations accessible en cliquant sur les differents Option (Ex: Appuis sur Propagation donne toute les infos sur la propagations). Toute ces informations seront prisent sur le site covid19.gouv.tg
+- [x] Le menu media se verra modifié pour donner deux colonnes l'une contenant des Messages audio et l'autre des videos qui peuvent être partager sur les differents réseaux sociaux 
 
 
-<div style="background-color:rgb(169,169,169); text-align:center">
-<img src="screenshots/ss3.png" width="300" style="border-radius: 15px">
-&nbsp;
-<img src="screenshots/ss4.png" width="300" style="border-radius: 15px">
-</div>
 
 ## 🔌 Plugins
 | Name | Usage |
 |:------:|:-------:|
-|[**flutter_bloc**](https://pub.dev/packages/flutter_bloc)| State Management|
+|[**flutter_bloc**](https://pub.dev/packages/fluter_bloc)| State Management|
 |[**DIO**](https://pub.dev/packages/dio)| Network calls|
 |[**WebView**](https://pub.dev/packages/webview_flutter)| InApp WebView|
 
