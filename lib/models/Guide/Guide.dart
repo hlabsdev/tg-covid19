@@ -22,13 +22,13 @@ final propagationList = [
         "Beaucoup de personnes atteintes présentent des symptômes discrets aux premiers stades de la maladie (par exemple, une toux légère). Il est alors possible de contracter la COVID-19 au contact de ces personnes, même si elles ne se sentent pas malades.",
   ),
   Guide(
-//    imageUrl: 'assets/images/Guide/prevention2.png',
+    imageUrl: 'assets/images/Guide/prevention2.png',
     title: 'Gouttelettes respiratoires',
     description:
         "La maladie peut se transmettre d’une personne à l’autre principalement par des gouttelettes respiratoires expulsées par le nez ou par la bouche lorsqu’une personne tousse ou éternue. Il est donc possible de contracter la COVID-19 en respirant des gouttelettes d’une personne malade qui vient de tousser ou d’éternuer. C’est pourquoi il est important de se tenir à plus d’un mètre d’une personne malade.",
   ),
   Guide(
-//    imageUrl: 'assets/images/Guide/prevention.png',
+    imageUrl: 'assets/images/Guide/prevention.png',
     title: 'Gouttelettes respiratoires',
     description:
         "Ces gouttelettes peuvent se retrouver sur des objets ou des surfaces autour de la personne en question. On peut alors contracter la COVID-19 si on touche ces objets ou ces surfaces et si on se touche ensuite les yeux, le nez ou la bouche.",
@@ -61,7 +61,7 @@ final prevList = [
         "Toussez ou éternuez dans un mouchoir ou dans le pli de votre coude. Ne pas se toucher les yeux, le nez ou la bouche.",
   ),
   Guide(
-    imageUrl: 'assets/images/Guide/distance.png',
+    imageUrl: 'assets/images/distance.png',
     title: 'Distanciation sociale',
     description:
     "Saluez sans se serrer les mains, évitez les embrassades. Restez à une distance d’au moins 1 mètre des autres.",

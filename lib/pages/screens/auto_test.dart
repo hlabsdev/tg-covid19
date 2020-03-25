@@ -21,7 +21,7 @@ class _SettingsPageState extends State<SettingsPage>
     return Scaffold(
       body: Container(
         child: WebView(
-          initialUrl:"https://covid19-check.smspro.tg/web/starter/landing",
+          initialUrl:"http://covid19-check.smspro.tg/web/starter/landing",
           javascriptMode: JavascriptMode.unrestricted,
           gestureNavigationEnabled: true,
 

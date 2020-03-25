@@ -42,11 +42,13 @@ class _ListPropState extends State<ListProp>
                         mainAxisAlignment: MainAxisAlignment.start,
                         crossAxisAlignment: CrossAxisAlignment.start,
                         children: <Widget>[
-                          Text(
-                            propagationList[index].title.toUpperCase(),
-                            style: Theme.of(context).textTheme.subhead,
-                            textAlign: TextAlign.center,
-                            overflow: TextOverflow.visible,
+                          Center(
+                            child: Text(
+                              propagationList[index].title.toUpperCase(),
+                              style: Theme.of(context).textTheme.subhead,
+                              textAlign: TextAlign.center,
+                              overflow: TextOverflow.visible,
+                            ),
                           ),
                           SizedBox(
                             height: 16.0,
