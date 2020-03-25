@@ -27,7 +27,7 @@ class _PropagationState extends State<Propagation>
             return Padding(
               padding:
                   const EdgeInsets.symmetric(vertical: 8.0, horizontal: 16.0),
-              child: new ListPropag(),
+              child: ListPropag(),
             );
           },
         ),

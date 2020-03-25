@@ -1,3 +1,4 @@
+import 'package:covid19_TG/pages/screens/civisme.dart';
 import 'package:covid19_TG/pages/screens/doli.dart';
 import 'package:covid19_TG/pages/screens/pevention.dart';
 import 'package:covid19_TG/pages/screens/propagation.dart';
@@ -31,8 +32,10 @@ class _InformationScreenState extends State<InformationScreen>
 //            SearchBar(),
               InkWell(
                   onTap: () {
-                    Navigator.push(context,
-                        MaterialPageRoute(builder: (context) => new Propagation()));
+                    Navigator.push(
+                        context,
+                        MaterialPageRoute(
+                            builder: (context) => new Propagation()));
                   },
                   child: InformationTitleCard(
                     icon: LineIcons.share_alt,
@@ -44,9 +47,9 @@ class _InformationScreenState extends State<InformationScreen>
 
               InkWell(
                 onTap: () {
-                Navigator.push(context,
-                    MaterialPageRoute(builder: (context) => new Sypmtomes()));
-              },
+                  Navigator.push(context,
+                      MaterialPageRoute(builder: (context) => new Civisme()));
+                },
                 child: InformationTitleCard(
                   icon: LineIcons.warning,
                   iconColor: CardColors.cyan,
@@ -58,8 +61,10 @@ class _InformationScreenState extends State<InformationScreen>
 
               InkWell(
                 onTap: () {
-                  Navigator.push(context,
-                      MaterialPageRoute(builder: (context) => new Prevention()));
+                  Navigator.push(
+                      context,
+                      MaterialPageRoute(
+                          builder: (context) => new Prevention()));
                 },
                 child: InformationTitleCard(
                   icon: LineIcons.heartbeat,
@@ -73,7 +78,7 @@ class _InformationScreenState extends State<InformationScreen>
               InkWell(
                 onTap: () {
                   Navigator.push(context,
-                      MaterialPageRoute(builder: (context) => new QueFaire()));
+                      MaterialPageRoute(builder: (context) => Civisme()));
                 },
                 child: InformationTitleCard(
                   icon: LineIcons.question_circle,
@@ -110,6 +115,58 @@ class _InformationScreenState extends State<InformationScreen>
                   title: 'Les zones a risques',
                 ),
               ),
+              SizedBox(height: hp(3)),
+//              ====================
+              Padding(
+                padding: EdgeInsets.symmetric(horizontal: 5),
+                child: Column(
+                  children: <Widget>[
+                    Container(
+                      child: ExpansionTile(
+                        title: InformationTitleCard(
+                          icon: LineIcons.bell,
+                          iconColor: CardColors.red,
+                          subTitle: "Les zones a eviter imperativement !",
+                          title: 'Les zones a risques',
+                        ),
+                        leading: Image.asset('assets/icons/image164.png'),
+                        children: <Widget>[
+                          Padding(
+                            padding: EdgeInsets.symmetric(
+                                vertical: 20, horizontal: 10),
+                            child: Column(
+                              children: <Widget>[
+                                Center(
+                                  child: Container(
+                                    height: 200,
+                                    width: MediaQuery.of(context).size.width,
+                                    decoration: BoxDecoration(
+                                        image: DecorationImage(
+                                            image: AssetImage(
+                                                "assets/images/tansmission.png"),
+                                            fit: BoxFit.cover)),
+                                  ),
+                                ),
+                                SizedBox(
+                                  height: 12,
+                                ),
+                                Center(
+                                  child: Text(
+                                    "On peut etre contaminé en serrant les mains, en se touchant physiquement",
+                                    style: TextStyle(
+                                        fontFamily: 'Open Sans', fontSize: 15),
+                                  ),
+                                ),
+                              ],
+                            ),
+                          )
+                        ],
+                      ),
+                    )
+                  ],
+                ),
+              ),
+              //              ====================
             ],
           )),
     );

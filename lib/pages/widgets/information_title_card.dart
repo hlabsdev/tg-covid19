@@ -22,13 +22,13 @@ class InformationTitleCard extends StatelessWidget {
     final Function wp = Screen(context).wp;
     final Function hp = Screen(context).hp;
     return Container(
-      height: hp(15),
+      height: hp(18),
       width: wp(100),
-      padding: EdgeInsets.all(15),
+//      padding: EdgeInsets.all(15),
       //margin: EdgeInsets.all(15),
       decoration: BoxDecoration(
         color: LightColor.cardBackground,
-        borderRadius: BorderRadius.circular(20),
+        borderRadius: BorderRadius.circular(5),
         boxShadow: [
           new BoxShadow(
               color: Colors.grey[100],
@@ -55,12 +55,13 @@ class InformationTitleCard extends StatelessWidget {
                       mainAxisAlignment: MainAxisAlignment.start,
                       crossAxisAlignment: CrossAxisAlignment.start,
                       children: <Widget>[
+                        SizedBox(height: hp(3)),
                         Text(title,
                             style: AppTheme.h2Style.copyWith(
                                 color: LightColor.darkgrey,
                                 fontWeight: FontWeight.bold,
                                 fontSize: 15)),
-                        SizedBox(height: hp(1)),
+                        SizedBox(height: hp(2)),
                         Text(subTitle,
                             style: AppTheme.h2Style.copyWith(
                                 color: LightColor.darkgrey.withOpacity(0.5),
