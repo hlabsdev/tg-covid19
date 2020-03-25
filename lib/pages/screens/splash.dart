@@ -22,7 +22,7 @@ class _SplashState extends State<Splash> {
   void initState() {
     super.initState();
     Timer.periodic(Duration(seconds: 5), (Timer timer) {
-      if (_currentPage < 2) {
+      if (_currentPage < 4) {
         _currentPage++;
       } else {
         _currentPage = 0;

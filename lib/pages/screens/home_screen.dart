@@ -1,6 +1,7 @@
 import 'dart:async';
 import 'dart:convert';
 import 'package:covid19_TG/blocs/blocs.dart';
+import 'package:covid19_TG/pages/screens/auto_test.dart';
 import 'package:covid19_TG/pages/widgets/global_card.dart';
 import 'package:covid19_TG/theme/color/light_color.dart';
 import 'package:covid19_TG/utils/calculateGrowth.dart';
@@ -98,7 +99,12 @@ class _HomeScreenState extends State<HomeScreen>
                         ],
                       ),
                       child: InkWell(
-                        onTap: () {},
+                        onTap: () {
+                          Navigator.push(
+                              context,
+                              MaterialPageRoute(
+                                  builder: (context) => new SettingsPage()));
+                        },
                         child: Center(
                           child: ListTile(
                             title: Text("Faites votre Auto-Test"),
@@ -147,12 +153,12 @@ class _HomeScreenState extends State<HomeScreen>
                     ),
                     SizedBox(height: hp(3)),
                     GlobalSituationCard(
-                      cardTitle: 'Cas Graves',
+                      cardTitle: 'Cas Actif',
                       caseTitle: 'Graves',
-                      currentData: data1[0]["total_serious_cases"],
+                      currentData: data1[0]["total_active_cases"],
                       newData: null,
-                      icon: showGrowthIcon(data1[0]["total_serious_cases"],
-                          firstData.totalSeriousCases),
+                      icon: showGrowthIcon(data1[0]["total_active_cases"],
+                          data1[0]["total_new_cases_today"]),
                       color: Colors.red,
                       cardColor: CardColors.cyan,
                     ),

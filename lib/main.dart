@@ -1,4 +1,5 @@
 import 'package:covid19_TG/repositories/repositories.dart';
+import 'package:covid19_TG/home.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
 
@@ -41,6 +42,7 @@ class MyApp extends StatelessWidget {
           home: BlocProvider(
             create: (context) => CaseBloc(apiRepository: apiRepository),
             child: Splash(),
+            lazy: true,
           ),
         );
       },
