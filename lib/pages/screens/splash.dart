@@ -45,9 +45,6 @@ class _SplashState extends State<Splash> {
 
   Widget build(BuildContext context) {
     return Scaffold(
-//      appBar: AppBar(
-//        title: Text('Home'),
-//      ),
       body: Container(
         color: Colors.white,
         child: Padding(
