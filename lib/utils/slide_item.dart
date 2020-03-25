@@ -1,4 +1,4 @@
-import 'package:covid_tracker/models/slide.dart';
+import 'package:covid19_TG/models/slide.dart';
 import 'package:flutter/material.dart';
 import '../models/slide.dart';
 

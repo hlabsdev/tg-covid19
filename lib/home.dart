@@ -1,8 +1,8 @@
-import 'package:covid_tracker/pages/screens/home_screen.dart';
-import 'package:covid_tracker/theme/color/light_color.dart';
-import 'package:covid_tracker/theme/theme.dart';
-import 'package:covid_tracker/utils/Alertes.dart';
-import 'package:covid_tracker/utils/margin.dart';
+import 'package:covid19_TG/pages/screens/home_screen.dart';
+import 'package:covid19_TG/theme/color/light_color.dart';
+import 'package:covid19_TG/theme/theme.dart';
+import 'package:covid19_TG/utils/Alertes.dart';
+import 'package:covid19_TG/utils/margin.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter/scheduler.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
@@ -11,9 +11,9 @@ import 'package:google_nav_bar/google_nav_bar.dart';
 import 'package:line_icons/line_icons.dart';
 
 import 'blocs/blocs.dart';
-import 'pages/screens/information_screen.dart';
-import 'pages/screens/news_screen.dart';
-import 'pages/screens/settings_screen.dart';
+import 'pages/screens/guide.dart';
+import 'pages/screens/nouvelles.dart';
+import 'pages/screens/auto_test.dart';
 
 class Home extends StatefulWidget {
   @override
@@ -91,11 +91,11 @@ class _HomeState extends State<Home> {
 
             InkWell(
               onTap: () async {
-                Navigator.of(context, rootNavigator: true).pop(
+                /*Navigator.of(context, rootNavigator: true).pop(
                       await Navigator.push(context,
                         MaterialPageRoute(builder: (context)=>Alertes())
                       )
-                    );
+                    );*/
               },
               child: ListTile(
                 title: Text("Gerer les alarmes"),
@@ -176,9 +176,10 @@ class _HomeState extends State<Home> {
                     backgroundColor: CardColors.blue,
                   ),
                   GButton(
-                    icon: LineIcons.heartbeat,
+                    icon: LineIcons.medkit,
                     text: 'Test',
                     backgroundColor: CardColors.green,
+//                    active: true,
                   ),
                 ],
                 selectedIndex: selectedIndex,

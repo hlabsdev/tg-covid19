@@ -37,7 +37,7 @@ final slideList = [
     description: "Saluez sans se serrer les mains, évitez les embrassades.",
   ),
   Slide(
-    imageUrl: 'assets/images/distance.jpg',
+    imageUrl: 'assets/images/distance.png',
     title: 'Une distance de 1M entre vous',
     description: "La santé est le plus important!!.",
   ),

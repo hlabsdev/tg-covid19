@@ -1,6 +1,8 @@
-import 'package:covid_tracker/models/slide.dart';
-import 'package:covid_tracker/utils/slide_dots.dart';
-import 'package:covid_tracker/utils/slide_item.dart';
+import 'package:covid19_TG/models/slide.dart';
+import 'package:covid19_TG/utils/slide_dots.dart';
+import 'package:covid19_TG/utils/slide_dots.dart';
+import 'package:covid19_TG/utils/slide_dots.dart';
+import 'package:covid19_TG/utils/slide_item.dart';
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 import 'dart:async';

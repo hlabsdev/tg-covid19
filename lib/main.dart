@@ -1,4 +1,4 @@
-import 'package:covid_tracker/repositories/repositories.dart';
+import 'package:covid19_TG/repositories/repositories.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
 

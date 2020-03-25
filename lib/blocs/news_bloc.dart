@@ -1,7 +1,7 @@
 import 'dart:convert';
 
-import 'package:covid_tracker/models/news_model.dart';
-import 'package:covid_tracker/repositories/repositories.dart';
+import 'package:covid19_TG/models/news_model.dart';
+import 'package:covid19_TG/repositories/repositories.dart';
 import 'package:equatable/equatable.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';

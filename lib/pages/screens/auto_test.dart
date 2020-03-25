@@ -23,6 +23,8 @@ class _SettingsPageState extends State<SettingsPage>
         child: WebView(
           initialUrl:"https://covid19-check.smspro.tg/web/starter/choose/lang",
           javascriptMode: JavascriptMode.unrestricted,
+          gestureNavigationEnabled: true,
+
           onWebViewCreated: (WebViewController webViewController) {
             _completer.complete(webViewController);
           },

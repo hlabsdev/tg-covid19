@@ -1,10 +1,10 @@
 import 'dart:convert';
 
-import 'package:covid_tracker/models/case_model.dart';
-import 'package:covid_tracker/models/general_data_model.dart';
-import 'package:covid_tracker/models/home_data_model.dart';
-import 'package:covid_tracker/repositories/api_repository.dart';
-import 'package:covid_tracker/utils/storageutil.dart';
+import 'package:covid19_TG/models/case_model.dart';
+import 'package:covid19_TG/models/general_data_model.dart';
+import 'package:covid19_TG/models/home_data_model.dart';
+import 'package:covid19_TG/repositories/api_repository.dart';
+import 'package:covid19_TG/utils/storageutil.dart';
 import 'package:equatable/equatable.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';

@@ -1,13 +1,13 @@
 import 'dart:async';
 
-import 'package:covid_tracker/blocs/blocs.dart';
-import 'package:covid_tracker/models/ncovid_data.dart';
-import 'package:covid_tracker/models/serializers.dart';
-import 'package:covid_tracker/pages/widgets/global_card.dart';
-import 'package:covid_tracker/pages/widgets/news_card.dart';
-import 'package:covid_tracker/theme/color/light_color.dart';
-import 'package:covid_tracker/utils/calculateGrowth.dart';
-import 'package:covid_tracker/utils/margin.dart';
+import 'package:covid19_TG/blocs/blocs.dart';
+import 'package:covid19_TG/models/ncovid_data.dart';
+import 'package:covid19_TG/models/serializers.dart';
+import 'package:covid19_TG/pages/widgets/global_card.dart';
+import 'package:covid19_TG/pages/widgets/news_card.dart';
+import 'package:covid19_TG/theme/color/light_color.dart';
+import 'package:covid19_TG/utils/calculateGrowth.dart';
+import 'package:covid19_TG/utils/margin.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
 import 'package:flutter_spinkit/flutter_spinkit.dart';

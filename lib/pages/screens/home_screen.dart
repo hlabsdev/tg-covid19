@@ -1,10 +1,10 @@
 import 'dart:async';
 import 'dart:convert';
-import 'package:covid_tracker/blocs/blocs.dart';
-import 'package:covid_tracker/pages/widgets/global_card.dart';
-import 'package:covid_tracker/theme/color/light_color.dart';
-import 'package:covid_tracker/utils/calculateGrowth.dart';
-import 'package:covid_tracker/utils/margin.dart';
+import 'package:covid19_TG/blocs/blocs.dart';
+import 'package:covid19_TG/pages/widgets/global_card.dart';
+import 'package:covid19_TG/theme/color/light_color.dart';
+import 'package:covid19_TG/utils/calculateGrowth.dart';
+import 'package:covid19_TG/utils/margin.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
 import 'package:flutter_spinkit/flutter_spinkit.dart';
@@ -81,6 +81,37 @@ class _HomeScreenState extends State<HomeScreen>
               return RefreshIndicator(
                 child: Column(
                   children: <Widget>[
+                    Container(
+                      width: screenWidth(context),
+                      height: screenHeight(context, percent: 0.1),
+                      margin: EdgeInsets.symmetric(horizontal: 25),
+                      padding: EdgeInsets.all(3),
+                      decoration: BoxDecoration(
+                        color: Colors.orange,
+                        borderRadius: BorderRadius.circular(8),
+                        boxShadow: [
+                          BoxShadow(
+                              color: Colors.black.withOpacity(0.18),
+                              blurRadius: 10,
+                              spreadRadius: 3.5,
+                              offset: Offset(0, 10)),
+                        ],
+                      ),
+                      child: InkWell(
+                        onTap: () {},
+                        child: Center(
+                          child: ListTile(
+                            title: Text("Faites votre Auto-Test"),
+                            leading: Icon(
+                              Icons.thumbs_up_down,
+                              color: Colors.red,
+                              size: 50.0,
+                            ),
+                          ),
+                        ),
+                      ),
+                    ),
+                    SizedBox(height: hp(3)),
                     GlobalSituationCard(
                       cardTitle: 'Cas Confirmés',
                       caseTitle: 'Confirmés',
@@ -90,12 +121,12 @@ class _HomeScreenState extends State<HomeScreen>
                           data1[0]["total_new_cases_today"]),
                       color: Colors.red,
                     ),
+                    SizedBox(height: hp(3)),
                     GlobalSituationCard(
                       cardTitle: 'Cas Gueris',
                       caseTitle: 'Gueris',
                       currentData: data1[0]["total_recovered"],
-                      newData:
-                      null,
+                      newData: null,
                       cardColor: CardColors.blue,
                       icon: Icon(
                         Icons.arrow_upward,
@@ -103,6 +134,7 @@ class _HomeScreenState extends State<HomeScreen>
                       ),
                       color: Colors.green,
                     ),
+                    SizedBox(height: hp(3)),
                     GlobalSituationCard(
                       cardTitle: 'Cas de Decès',
                       caseTitle: 'Decès',
@@ -142,7 +174,7 @@ class _HomeScreenState extends State<HomeScreen>
             }
             return Center(
                 child: RefreshIndicator(
-              child: Text('Pull to refresh'),
+              child: Text('Tirez pour rafraichir'),
               onRefresh: () {
                 BlocProvider.of<CaseBloc>(context).add(FetchCase());
                 return _refreshCompleter.future;
