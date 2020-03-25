@@ -23,21 +23,33 @@ class _SettingsPageState extends State<SettingsPage>
         child: WebView(
           initialUrl:"http://covid19-check.smspro.tg/web/starter/landing",
           javascriptMode: JavascriptMode.unrestricted,
-          gestureNavigationEnabled: true,
-
           onWebViewCreated: (WebViewController webViewController) {
             _completer.complete(webViewController);
           },
         ),
       ),
-      floatingActionButton: FutureBuilder<WebViewController>(
+     floatingActionButton: FutureBuilder<WebViewController>(
+       future: _completer.future,
+       builder: (BuildContext context, AsyncSnapshot<WebViewController>
+       coontroller){
+         if (coontroller.hashCode){
+           child: FloatingActionButton(
+             child: Icon(Icons.refresh),
+             onPressed: (){
+               controller.data.loadUrl("http://covid19-check.smspro.tg/web/starter/landing")
+             },
+           ),
+         }
+       },
+     ),
+     /* floatingActionButton: FutureBuilder<WebViewController>(
         future: _completer.future,
         builder: (BuildContext context,
             AsyncSnapshot<WebViewController> controller) {
           return Container();
 
         },
-      ),
+      ),*/
     );
   }
 

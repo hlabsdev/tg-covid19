@@ -48,7 +48,7 @@ class _InformationScreenState extends State<InformationScreen>
               InkWell(
                 onTap: () {
                   Navigator.push(context,
-                      MaterialPageRoute(builder: (context) => new Civisme()));
+                      MaterialPageRoute(builder: (context) => new Sypmtomes()));
                 },
                 child: InformationTitleCard(
                   icon: LineIcons.warning,
@@ -78,7 +78,7 @@ class _InformationScreenState extends State<InformationScreen>
               InkWell(
                 onTap: () {
                   Navigator.push(context,
-                      MaterialPageRoute(builder: (context) => Civisme()));
+                      MaterialPageRoute(builder: (context) => QueFaire()));
                 },
                 child: InformationTitleCard(
                   icon: LineIcons.question_circle,
