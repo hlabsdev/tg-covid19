@@ -1,10 +1,10 @@
 import 'package:covid19_TG/pages/screens/civisme.dart';
 import 'package:covid19_TG/pages/screens/doli.dart';
-import 'package:covid19_TG/pages/screens/pevention.dart';
-import 'package:covid19_TG/pages/screens/propagation.dart';
+import 'package:covid19_TG/pages/screens/list_prev.dart';
+import 'package:covid19_TG/pages/screens/list_prop.dart';
 import 'package:covid19_TG/pages/screens/que_faire.dart';
 import 'package:covid19_TG/pages/screens/risquy_zone.dart';
-import 'package:covid19_TG/pages/screens/symptomes.dart';
+import 'package:covid19_TG/pages/screens/list_sympt.dart';
 import 'package:covid19_TG/pages/widgets/information_title_card.dart';
 import 'package:covid19_TG/theme/color/light_color.dart';
 import 'package:flutter/material.dart';
@@ -35,7 +35,7 @@ class _InformationScreenState extends State<InformationScreen>
                     Navigator.push(
                         context,
                         MaterialPageRoute(
-                            builder: (context) => new Propagation()));
+                            builder: (context) => new ListProp()));
                   },
                   child: InformationTitleCard(
                     icon: LineIcons.share_alt,
@@ -116,57 +116,7 @@ class _InformationScreenState extends State<InformationScreen>
                 ),
               ),
               SizedBox(height: hp(3)),
-//              ====================
-              Padding(
-                padding: EdgeInsets.symmetric(horizontal: 5),
-                child: Column(
-                  children: <Widget>[
-                    Container(
-                      child: ExpansionTile(
-                        title: InformationTitleCard(
-                          icon: LineIcons.bell,
-                          iconColor: CardColors.red,
-                          subTitle: "Les zones a eviter imperativement !",
-                          title: 'Les zones a risques',
-                        ),
-                        leading: Image.asset('assets/icons/image164.png'),
-                        children: <Widget>[
-                          Padding(
-                            padding: EdgeInsets.symmetric(
-                                vertical: 20, horizontal: 10),
-                            child: Column(
-                              children: <Widget>[
-                                Center(
-                                  child: Container(
-                                    height: 200,
-                                    width: MediaQuery.of(context).size.width,
-                                    decoration: BoxDecoration(
-                                        image: DecorationImage(
-                                            image: AssetImage(
-                                                "assets/images/tansmission.png"),
-                                            fit: BoxFit.cover)),
-                                  ),
-                                ),
-                                SizedBox(
-                                  height: 12,
-                                ),
-                                Center(
-                                  child: Text(
-                                    "On peut etre contaminé en serrant les mains, en se touchant physiquement",
-                                    style: TextStyle(
-                                        fontFamily: 'Open Sans', fontSize: 15),
-                                  ),
-                                ),
-                              ],
-                            ),
-                          )
-                        ],
-                      ),
-                    )
-                  ],
-                ),
-              ),
-              //              ====================
+//
             ],
           )),
     );
