@@ -9,22 +9,21 @@ class _PropagationState extends State<Propagation>with AutomaticKeepAliveClientM
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      body: Container(
-        child: new Column(
-          crossAxisAlignment: CrossAxisAlignment.center,
-          mainAxisAlignment: MainAxisAlignment.center,
-          children: <Widget>[
-            Stack(
+      body: ListView.builder(itemBuilder: (context, index){
+        return Padding(
+          padding: const EdgeInsets.symmetric(vertical: 8.0, horizontal: 16.0),
+          child: new Card(
+            shape: new RoundedRectangleBorder(
+              borderRadius: BorderRadius.circular(15.0)
+            ),
+            child: new Column(
               children: <Widget>[
-                Positioned(
-                  top: ,
-                  child: null,
-                )
+                new Image.asset("assets/images/")
               ],
-            )
-          ],
-        ),
-      ),
+            ),
+          ),
+        )
+      },),
     );
   }
 
