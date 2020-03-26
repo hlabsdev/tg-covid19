@@ -1,4 +1,5 @@
 import 'package:covid19_TG/alarmes/a.dart';
+import 'package:covid19_TG/alarmes/m.dart';
 import 'package:covid19_TG/alarmes/r.dart';
 import 'package:covid19_TG/pages/screens/home_screen.dart';
 import 'package:covid19_TG/theme/color/light_color.dart';
@@ -105,7 +106,7 @@ class _HomeState extends State<Home> {
                 title: Text("Gerer les alarmes"),
                 leading: Icon(
                   Icons.alarm_on,
-                  color: Colors.red,
+                  color: Colors.blueGrey,
                 ),
               ),
             ),
