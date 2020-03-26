@@ -2,6 +2,7 @@ import 'dart:async';
 import 'dart:convert';
 import 'package:covid19_TG/blocs/blocs.dart';
 import 'package:covid19_TG/pages/screens/auto_test.dart';
+import 'package:covid19_TG/pages/screens/auto_test_start.dart';
 import 'package:covid19_TG/pages/widgets/global_card.dart';
 import 'package:covid19_TG/theme/color/light_color.dart';
 import 'package:covid19_TG/utils/calculateGrowth.dart';
@@ -103,7 +104,7 @@ class _HomeScreenState extends State<HomeScreen>
                           Navigator.push(
                               context,
                               MaterialPageRoute(
-                                  builder: (context) => new SettingsPage()));
+                                  builder: (context) => new AutoTest()));
                         },
                         child: Center(
                           child: ListTile(

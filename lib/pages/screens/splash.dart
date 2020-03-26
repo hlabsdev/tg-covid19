@@ -1,7 +1,5 @@
 import 'package:covid19_TG/models/slide.dart';
 import 'package:covid19_TG/utils/slide_dots.dart';
-import 'package:covid19_TG/utils/slide_dots.dart';
-import 'package:covid19_TG/utils/slide_dots.dart';
 import 'package:covid19_TG/utils/slide_item.dart';
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';

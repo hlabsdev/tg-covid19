@@ -1,3 +1,5 @@
+import 'package:covid19_TG/alarmes/a.dart';
+import 'package:covid19_TG/alarmes/r.dart';
 import 'package:covid19_TG/pages/screens/home_screen.dart';
 import 'package:covid19_TG/theme/color/light_color.dart';
 import 'package:covid19_TG/theme/theme.dart';
@@ -69,7 +71,7 @@ class _HomeState extends State<Home> {
       drawer: new Drawer(
         child: new ListView(
           children: <Widget>[
-//            en tete
+//            entete
             new UserAccountsDrawerHeader(
               accountName: null,
               accountEmail: null,
@@ -91,11 +93,13 @@ class _HomeState extends State<Home> {
 
             InkWell(
               onTap: () async {
-                /*Navigator.of(context, rootNavigator: true).pop(
-                      await Navigator.push(context,
-                        MaterialPageRoute(builder: (context)=>Alertes())
-                      )
-                    );*/
+                Navigator.of(context, rootNavigator: true).pop();
+                await Navigator.push(
+                  context,
+                  MaterialPageRoute(
+                    builder: (context) =>MyHomePage(),
+                  ),
+                );
               },
               child: ListTile(
                 title: Text("Gerer les alarmes"),

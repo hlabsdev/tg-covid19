@@ -507,12 +507,19 @@ packages:
     source: hosted
     version: "1.0.0"
   rxdart:
-    dependency: transitive
+    dependency: "direct main"
     description:
       name: rxdart
       url: "https://pub.dartlang.org"
     source: hosted
     version: "0.23.1"
+  scheduled_notifications:
+    dependency: "direct main"
+    description:
+      name: scheduled_notifications
+      url: "https://pub.dartlang.org"
+    source: hosted
+    version: "1.0.0"
   shared_preferences:
     dependency: "direct main"
     description:

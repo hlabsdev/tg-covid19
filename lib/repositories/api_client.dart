@@ -1,13 +1,8 @@
-import 'dart:convert';
 
-import 'package:covid19_TG/models/case_model.dart';
 import 'package:covid19_TG/models/general_data_model.dart';
-import 'package:covid19_TG/models/news_model.dart';
 import 'package:covid19_TG/models/other_case_model.dart';
 import 'package:dio/dio.dart';
 import 'package:http/http.dart' as http;
-
-import 'api_interceptor.dart';
 
 class ApiClient {
   static const baseUrl =
