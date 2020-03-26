@@ -49,14 +49,14 @@ FutureOr<dynamic> onError(DioError dioError) {
       break;
     case DioErrorType.DEFAULT:
       dioError.error =
-          "Connection to API server failed due to internet connection";
+      "Connection to API server failed due to internet connection";
       break;
     case DioErrorType.RECEIVE_TIMEOUT:
       dioError.error = "Receive timeout in connection with API server";
       break;
     case DioErrorType.RESPONSE:
       dioError.error =
-          "Received invalid status code: ${dioError.response.statusCode}";
+      "Received invalid status code: ${dioError.response.statusCode}";
       break;
     default:
       dioError.error = "Unexpected error occured";

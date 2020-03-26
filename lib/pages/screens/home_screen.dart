@@ -1,7 +1,6 @@
 import 'dart:async';
 import 'dart:convert';
 import 'package:covid19_TG/blocs/blocs.dart';
-import 'package:covid19_TG/pages/screens/auto_test.dart';
 import 'package:covid19_TG/pages/screens/auto_test_start.dart';
 import 'package:covid19_TG/pages/widgets/global_card.dart';
 import 'package:covid19_TG/theme/color/light_color.dart';
@@ -108,7 +107,7 @@ class _HomeScreenState extends State<HomeScreen>
                         },
                         child: Center(
                           child: ListTile(
-                            title: Text("Faites votre Auto-Test"),
+                            title: Text("Faites votre Auto-Test", style: TextStyle(color: Colors.white),),
                             leading: Icon(
                               Icons.thumbs_up_down,
                               color: Colors.red,

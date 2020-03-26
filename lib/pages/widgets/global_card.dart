@@ -87,31 +87,35 @@ class GlobalSituationCard extends StatelessWidget {
                           Column(
                             crossAxisAlignment: CrossAxisAlignment.start,
                             children: <Widget>[
-                              Text(
-                                currentData != null
-                                    ? formatter.format(currentData)
-                                    : '-',
-                                style: GoogleFonts.cabin(
-                                  textStyle: TextStyle(
-                                      color: Colors.white,
-                                      fontWeight: FontWeight.w500,
-                                      fontSize: 29),
+                              Center(
+                                child: Text(
+                                  currentData != null
+                                      ? formatter.format(currentData)
+                                      : '-',
+                                  style: GoogleFonts.cabin(
+                                    textStyle: TextStyle(
+                                        color: Colors.white,
+                                        fontWeight: FontWeight.w500,
+                                        fontSize: 29),
+                                  ),
                                 ),
                               ),
                               const YMargin(5),
-                              Text(
-                                caseTitle ?? "",
-                                style: GoogleFonts.cabin(
-                                  textStyle: TextStyle(
-                                      color: Colors.white54,
-                                      fontWeight: FontWeight.w300,
-                                      fontSize: 17),
+                              Center(
+                                child: Text(
+                                  caseTitle ?? "",
+                                  style: GoogleFonts.cabin(
+                                    textStyle: TextStyle(
+                                        color: Colors.white54,
+                                        fontWeight: FontWeight.w300,
+                                        fontSize: 17),
+                                  ),
                                 ),
                               ),
                             ],
                           ),
                           Spacer(),
-                          Column(
+                          /*Column(
                             crossAxisAlignment: CrossAxisAlignment.start,
                             children: <Widget>[
                               Text(
@@ -136,7 +140,7 @@ class GlobalSituationCard extends StatelessWidget {
                                 ),
                               ),
                             ],
-                          ),
+                          ),*/
                           Spacer(),
                         ],
                       ),

@@ -1,6 +1,7 @@
 import 'dart:async';
 
 import 'package:flutter/material.dart';
+import 'package:flutter_webview_plugin/flutter_webview_plugin.dart';
 import 'package:webview_flutter/webview_flutter.dart';
 
 class Dolli extends StatefulWidget {
@@ -19,14 +20,17 @@ class _DolliState extends State<Dolli>
   Widget build(BuildContext context) {
     super.build(context);
     return Scaffold(
-      body: Container(
-        child: WebView(
-          initialUrl:"https://dolli-app.com",
-          javascriptMode: JavascriptMode.unrestricted,
-          onWebViewCreated: (WebViewController webViewController) {
-            _completer.complete(webViewController);
-          },
-        ),
+      body: Center(
+          child : WebviewScaffold(
+            withJavascript: true,
+            mediaPlaybackRequiresUserGesture: false,
+            url: "https://dolli-app.com",
+//            appBar: AppBar(
+//              backgroundColor: Colors.transparent,
+//            ),
+            withZoom: true,
+            withLocalStorage: true,
+          )
       ),
       floatingActionButton: FutureBuilder<WebViewController>(
         future: _completer.future,

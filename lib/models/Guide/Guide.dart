@@ -1,5 +1,4 @@
 import 'package:flutter/material.dart';
-import 'package:line_icons/line_icons.dart';
 
 class Guide {
   final String imageUrl;
@@ -70,37 +69,13 @@ final prevList = [
 /*=========================================*/
 final symptList = [
   Guide(
-    imageUrl: 'assets/images/Guide/tansmission.png',
-    title: 'Fièvre',
+    imageUrl: 'assets/images/Guide/sympt1.jpg',
+    title: 'Les Principaux symptômes',
     description:
-        "On peut etre contaminé en serrant les mains, en se touchant physiquement",
+        "Fièvre; Toux; Gorge irritée; Peuvent s'ajouter les symptomes suivants: Fatigue –  Nez bouché – Douleurs – Diarrhée – Respiration très difficile – Perte de l’odorat et du goût",
   ),
   Guide(
-    imageUrl: 'assets/images/Guide/tansmission.png',
-    title: 'Toux',
-    description:
-        "On peut etre contaminé en serrant les mains, en se touchant physiquement",
-  ),
-  Guide(
-    imageUrl: 'assets/images/Guide/tansmission.png',
-    title: 'Gorge irritée',
-    description:
-        "On peut etre contaminé en serrant les mains, en se touchant physiquement",
-  ),
-  Guide(
-    imageUrl: 'assets/images/Guide/tansmission.png',
-    title: 'Gorge irritée',
-    description:
-        "On peut etre contaminé en serrant les mains, en se touchant physiquement",
-  ),
-  Guide(
-    imageUrl: 'assets/images/Guide/tansmission.png',
-    title: 'Peuvent s’ajouter les symptômes  suivants',
-    description:
-        "Fatigue –  Nez bouché – Douleurs – Diarrhée – Respiration très difficile – Perte de l’odorat et du goût",
-  ),
-  Guide(
-    imageUrl: 'assets/images/Guide/tansmission.png',
+    imageUrl: 'assets/images/Guide/sympt2.jpg',
     title:
         'TOUTE PERSONNE QUI A DE LA FIÈVRE, QUI TOUSSE ET QUI A DES DIFFICULTÉS À RESPIRER DOIT CONSULTER UN MÉDECIN.',
     description:

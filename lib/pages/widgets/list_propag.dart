@@ -3,7 +3,7 @@ import 'package:flutter/material.dart';
 class ListPropag extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
-    return null ;
+    return null;
 
    /*return Padding(padding: EdgeInsets.symmetric(horizontal: 8.0),
      child: Column(

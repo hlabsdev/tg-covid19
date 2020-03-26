@@ -31,8 +31,8 @@ class ApiRepository {
     return apiClient.getCountryNews('TG');
   }
 
-  // Future<OtherCaseModel> getSuspectedCases() async {
-  //   return apiClient.getSuspectedCases();
-  // }
-  
+// Future<OtherCaseModel> getSuspectedCases() async {
+//   return apiClient.getSuspectedCases();
+// }
+
 }

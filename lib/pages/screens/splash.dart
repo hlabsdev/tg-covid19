@@ -7,10 +7,8 @@ import 'dart:async';
 import '../../home.dart';
 import 'dart:math';
 import 'package:scheduled_notifications/scheduled_notifications.dart';
-import 'package:flutter_local_notifications/flutter_local_notifications.dart';
 import 'dart:isolate';
 import 'dart:ui';
-import 'package:android_alarm_manager/android_alarm_manager.dart';
 import 'package:shared_preferences/shared_preferences.dart';
 
 
@@ -42,8 +40,6 @@ Future<void> main() async {
 }
 
 class Splash extends StatefulWidget {
-  final FlutterLocalNotificationsPlugin flutterLocalNotificationsPlugin =
-  FlutterLocalNotificationsPlugin();
   @override
   _SplashState createState() => _SplashState();
   String _toTwoDigitString(int value) {
@@ -57,21 +53,12 @@ class _SplashState extends State<Splash> {
   // The background
   static SendPort uiSendPort;
 
-  // The callback for our alarm
-  static Future<void> callback() async {
-    print('Alarm fired!');
-
-    // This will be null if we're running in the background.
-    uiSendPort ??= IsolateNameServer.lookupPortByName(isolateName);
-    uiSendPort?.send(null);
-  }
   int _currentPage = 0;
   final PageController _pageController = PageController(initialPage: 0);
 
   @override
   void initState() {
     super.initState();
-    AndroidAlarmManager.initialize();
     Timer.periodic(Duration(seconds: 5), (Timer timer) {
       if (_currentPage < 4) {
         _currentPage++;
@@ -101,31 +88,29 @@ class _SplashState extends State<Splash> {
         MaterialPageRoute(
             builder: (context) => new Home()));
     this.deactivate();
-    await AndroidAlarmManager.oneShot(
-      const Duration(seconds: 5),
-      // Ensure we have a unique alarm ID.
-      Random().nextInt(pow(2, 31)),
-      callback,
-      exact: true,
-      wakeup: true,
-    );
     int notificationId1 = await ScheduledNotifications.scheduleNotification(
         new DateTime.now().add(new Duration(minutes: 1)).millisecondsSinceEpoch,
         "",
-        "Tous contre Covid19",
-        "Ensemble luttons contre la propagation du Covid19 au Togo. "
+        "Le coronavirus est réel",
+        "Rappelez-vous d'accomplir les gestes barrières \n pour votre propre santé"
     );
     int notificationId2 = await ScheduledNotifications.scheduleNotification(
         new DateTime.now().add(new Duration(hours: 5)).millisecondsSinceEpoch,
         "",
-        "Tous contre Covid19",
-        "Ensemble luttons contre la propagation du Covid19 au Togo. "
+        "Prenons notre santé au sérieux",
+        "Lavons-nous les mains régulièrement et évitons de se serrer les mains"
     );
     int notificationId3 = await ScheduledNotifications.scheduleNotification(
         new DateTime.now().add(new Duration(hours: 13)).millisecondsSinceEpoch,
         "",
-        "Tous contre Covid19",
-        "Ensemble luttons contre la propagation du Covid19 au Togo. "
+        "Prenons notre santé au sérieux",
+        "Lavons-nous les mains régulièrement et évitons de se serrer les mains"
+    );
+    int notificationId4 = await ScheduledNotifications.scheduleNotification(
+        new DateTime.now().add(new Duration(minutes: 30)).millisecondsSinceEpoch,
+        "",
+        "Prenons notre santé au sérieux",
+        "Toussons dans le coude pour éviter de contaminer nos proches"
     );
   }
   Widget build(BuildContext context) {

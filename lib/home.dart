@@ -1,10 +1,6 @@
-import 'package:covid19_TG/alarmes/a.dart';
-import 'package:covid19_TG/alarmes/m.dart';
-import 'package:covid19_TG/alarmes/r.dart';
+
 import 'package:covid19_TG/pages/screens/home_screen.dart';
 import 'package:covid19_TG/theme/color/light_color.dart';
-import 'package:covid19_TG/theme/theme.dart';
-import 'package:covid19_TG/utils/Alertes.dart';
 import 'package:covid19_TG/utils/margin.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter/scheduler.dart';
@@ -69,7 +65,7 @@ class _HomeState extends State<Home> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      drawer: new Drawer(
+     /*drawer: new Drawer(
         child: new ListView(
           children: <Widget>[
 //            entete
@@ -87,7 +83,6 @@ class _HomeState extends State<Home> {
               ),
               decoration: new BoxDecoration(
                 color: Colors.blueGrey,
-
               ),
             ),
             // corps
@@ -98,7 +93,7 @@ class _HomeState extends State<Home> {
                 await Navigator.push(
                   context,
                   MaterialPageRoute(
-                    builder: (context) =>MyHomePage(),
+                    builder: (context) => MyHomePage(),
                   ),
                 );
               },
@@ -110,21 +105,9 @@ class _HomeState extends State<Home> {
                 ),
               ),
             ),
-//
-//            InkWell(
-//              onTap: () {},
-//              child: ListTile(
-//                title: Text("Mon Compte"),
-//                leading: Icon(
-//                  Icons.person,
-//                  color: Colors.red,
-//                ),
-//              ),
-//            ),
           ],
         ),
-      ),
-
+      ),*/
       body: Column(
         crossAxisAlignment: CrossAxisAlignment.start,
         children: <Widget>[
@@ -132,12 +115,12 @@ class _HomeState extends State<Home> {
             padding: const EdgeInsets.symmetric(horizontal: 20),
             child: Column(
               children: <Widget>[
-                const YMargin(60),
+                const YMargin(40),
                 Text(
-                  'Covid-19 TG',
+                  'COVID19 TG',
                   style: GoogleFonts.cabin(
                     textStyle:
-                        TextStyle(fontSize: 21, color: Color(0xff989CAC)),
+                        TextStyle(fontSize: 18, color: Color(0xff989CAC)),
                   ),
                 ),
               ],

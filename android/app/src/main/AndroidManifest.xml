@@ -20,7 +20,7 @@
          FlutterApplication and put your custom class here. -->
     <application
         android:name="io.flutter.app.FlutterApplication"
-        android:label="covid_tracker"
+        android:label="COVID19 TG"
         android:icon="@mipmap/ic_launcher">
         <service
             android:name="io.flutter.plugins.androidalarmmanager.AlarmService"

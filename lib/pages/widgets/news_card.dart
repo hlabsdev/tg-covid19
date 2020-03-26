@@ -1,9 +1,7 @@
-import 'package:covid19_TG/theme/color/light_color.dart';
+
 import 'package:flutter/material.dart';
 import 'package:url_launcher/url_launcher.dart';
-import 'package:covid19_TG/theme/color/light_color.dart';
 import 'package:covid19_TG/utils/margin.dart';
-import 'package:flutter/material.dart';
 import 'package:google_fonts/google_fonts.dart';
 
 class NewsCard extends StatelessWidget {

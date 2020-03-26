@@ -1,14 +1,20 @@
 import 'dart:async';
+import 'dart:convert';
+
 import 'package:covid19_TG/blocs/blocs.dart';
 import 'package:covid19_TG/models/ncovid_data.dart';
 import 'package:covid19_TG/models/serializers.dart';
+import 'package:covid19_TG/pages/widgets/global_card.dart';
 import 'package:covid19_TG/pages/widgets/news_card.dart';
 import 'package:covid19_TG/theme/color/light_color.dart';
+import 'package:covid19_TG/utils/calculateGrowth.dart';
 import 'package:covid19_TG/utils/margin.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
 import 'package:flutter_spinkit/flutter_spinkit.dart';
 import 'package:responsive_screen/responsive_screen.dart';
+import 'package:http/http.dart' as http;
+import 'package:shimmer/shimmer.dart';
 
 class NewsPage extends StatefulWidget {
   @override
@@ -18,7 +24,21 @@ class NewsPage extends StatefulWidget {
 class _NewsPageState extends State<NewsPage>
     with AutomaticKeepAliveClientMixin {
   Completer<void> _refreshCompleter;
+/*=================*/
+  String url = "https://thevirustracker.com/free-api?countryNewsTotal=TG";
+  List data;
 
+
+  Future<String> makeRequest() async {
+    var response = await http
+        .get(Uri.encodeFull(url), headers: {"Accept": "application/json"});
+
+    setState(() {
+      var extractContryNewdata = json.decode(response.body);
+      data = extractContryNewdata["countrynewsitems"];
+    });
+  }
+/*=================*/
   @override
   void didChangeDependencies() {
     BlocProvider.of<NewsBloc>(context).add(FetchNews());

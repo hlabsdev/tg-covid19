@@ -1,5 +1,5 @@
-import 'package:covid19_TG/pages/screens/civisme.dart';
 import 'package:covid19_TG/pages/screens/doli.dart';
+import 'package:covid19_TG/pages/screens/etat_modial.dart';
 import 'package:covid19_TG/pages/screens/list_prev.dart';
 import 'package:covid19_TG/pages/screens/list_prop.dart';
 import 'package:covid19_TG/pages/screens/que_faire.dart';
@@ -113,6 +113,21 @@ class _InformationScreenState extends State<InformationScreen>
                   iconColor: CardColors.red,
                   subTitle: "Les zones a eviter imperativement !",
                   title: 'Les zones a risques',
+                ),
+              ),
+              SizedBox(height: hp(3)),
+//
+              SizedBox(height: hp(3)),
+              InkWell(
+                onTap: () {
+                  Navigator.push(context,
+                      MaterialPageRoute(builder: (context) => new Monde()));
+                },
+                child: InformationTitleCard(
+                  icon: LineIcons.globe,
+                  iconColor: CardColors.blue,
+                  subTitle: "Les nombres dans le monde entier",
+                  title: 'Etat mondial',
                 ),
               ),
               SizedBox(height: hp(3)),
