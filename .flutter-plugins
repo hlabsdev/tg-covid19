@@ -1,4 +1,6 @@
 # This is a generated file; do not edit or check into version control.
+assets_audio_player=C:\\AndroidSrc\\flutter\\.pub-cache\\hosted\\pub.dartlang.org\\assets_audio_player-1.2.3\\
+audioplayer=C:\\AndroidSrc\\flutter\\.pub-cache\\hosted\\pub.dartlang.org\\audioplayer-0.5.2\\
 flutter_webview_plugin=C:\\AndroidSrc\\flutter\\.pub-cache\\hosted\\pub.dartlang.org\\flutter_webview_plugin-0.3.10+2\\
 path_provider=C:\\AndroidSrc\\flutter\\.pub-cache\\hosted\\pub.dartlang.org\\path_provider-1.6.5\\
 path_provider_macos=C:\\AndroidSrc\\flutter\\.pub-cache\\hosted\\pub.dartlang.org\\path_provider_macos-0.0.4\\
@@ -6,7 +8,9 @@ scheduled_notifications=C:\\AndroidSrc\\flutter\\.pub-cache\\hosted\\pub.dartlan
 shared_preferences=C:\\AndroidSrc\\flutter\\.pub-cache\\hosted\\pub.dartlang.org\\shared_preferences-0.5.6+3\\
 shared_preferences_macos=C:\\AndroidSrc\\flutter\\.pub-cache\\hosted\\pub.dartlang.org\\shared_preferences_macos-0.0.1+6\\
 shared_preferences_web=C:\\AndroidSrc\\flutter\\.pub-cache\\hosted\\pub.dartlang.org\\shared_preferences_web-0.1.2+4\\
+system_shortcuts=C:\\AndroidSrc\\flutter\\.pub-cache\\hosted\\pub.dartlang.org\\system_shortcuts-0.0.7\\
 url_launcher=C:\\AndroidSrc\\flutter\\.pub-cache\\hosted\\pub.dartlang.org\\url_launcher-5.4.2\\
 url_launcher_macos=C:\\AndroidSrc\\flutter\\.pub-cache\\hosted\\pub.dartlang.org\\url_launcher_macos-0.0.1+4\\
 url_launcher_web=C:\\AndroidSrc\\flutter\\.pub-cache\\hosted\\pub.dartlang.org\\url_launcher_web-0.1.1+1\\
+volume=C:\\AndroidSrc\\flutter\\.pub-cache\\hosted\\pub.dartlang.org\\volume-0.1.0\\
 webview_flutter=C:\\AndroidSrc\\flutter\\.pub-cache\\hosted\\pub.dartlang.org\\webview_flutter-0.3.19+9\\

@@ -1,5 +1,6 @@
 
 import 'package:covid19_TG/pages/screens/home_screen.dart';
+import 'package:covid19_TG/player/audioPrevention.dart';
 import 'package:covid19_TG/theme/color/light_color.dart';
 import 'package:covid19_TG/utils/margin.dart';
 import 'package:flutter/material.dart';
@@ -24,7 +25,7 @@ class _HomeState extends State<Home> {
 
   void addPostFrameCallback(FrameCallback callback) {
     // Load data on widget load
-    print('relad?');
+    print('reload?');
     BlocProvider.of<CaseBloc>(context).add(FetchCase());
   }
 
@@ -43,7 +44,8 @@ class _HomeState extends State<Home> {
         HomeScreen(),
         NewsPage(),
         InformationScreen(),
-        SettingsPage(),
+//        SettingsPage(),
+        AudioPrevention(),
       ],
     );
   }
@@ -65,49 +67,6 @@ class _HomeState extends State<Home> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-     /*drawer: new Drawer(
-        child: new ListView(
-          children: <Widget>[
-//            entete
-            new UserAccountsDrawerHeader(
-              accountName: null,
-              accountEmail: null,
-              currentAccountPicture: GestureDetector(
-                child: new CircleAvatar(
-                  backgroundColor: Colors.grey,
-                  child: Icon(
-                    Icons.settings,
-                    color: Colors.white,
-                  ),
-                ),
-              ),
-              decoration: new BoxDecoration(
-                color: Colors.blueGrey,
-              ),
-            ),
-            // corps
-
-            InkWell(
-              onTap: () async {
-                Navigator.of(context, rootNavigator: true).pop();
-                await Navigator.push(
-                  context,
-                  MaterialPageRoute(
-                    builder: (context) => MyHomePage(),
-                  ),
-                );
-              },
-              child: ListTile(
-                title: Text("Gerer les alarmes"),
-                leading: Icon(
-                  Icons.alarm_on,
-                  color: Colors.blueGrey,
-                ),
-              ),
-            ),
-          ],
-        ),
-      ),*/
       body: Column(
         crossAxisAlignment: CrossAxisAlignment.start,
         children: <Widget>[
@@ -163,12 +122,19 @@ class _HomeState extends State<Home> {
                     text: 'Guides',
                     backgroundColor: CardColors.blue,
                   ),
-                  GButton(
+                  /*GButton(
                     icon: LineIcons.medkit,
                     text: 'Test',
                     backgroundColor: CardColors.green,
 //                    active: true,
+                  ),*/
+                  GButton(
+                    icon: LineIcons.hand_grab_o,
+                    text: 'Infos',
+                    backgroundColor: CardColors.cyan,
+//                    active: true,
                   ),
+
                 ],
                 selectedIndex: selectedIndex,
                 onTabChange: (index) {
