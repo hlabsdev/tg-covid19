@@ -77,7 +77,7 @@ final symptList = [
   Guide(
     imageUrl: 'assets/images/Guide/sympt2.jpg',
     title:
-        'TOUTE PERSONNE QUI A DE LA FIÈVRE, QUI TOUSSE ET QUI A DES DIFFICULTÉS À RESPIRER DOIT CONSULTER UN MÉDECIN.',
+        'TOUTE PERSONNE QUI A DE LA FIÈVRE, QUI TOUSSE ET QUI A DES DIFFICULTÉS À RESPIRER DOIT APPELER LE 111  ',
     description:
         "Ces symptômes sont généralement peu graves et apparaissent de manière progressive. Certaines personnes peuvent être infectées sans symptôme et se sentent bien. Environ 80 % des personnes guérissent sans avoir besoin de traitement particulier. Environ 1 personne sur 6 contractant la maladie présente des symptômes plus graves, comme une sensation de manque d’air ou un essoufflement anormal. Les personnes âgées et celles qui ont d’autres problèmes de santé (hypertension artérielle, problèmes cardiaques ou diabète) ont plus de risques de présenter des symptômes graves.",
   ),

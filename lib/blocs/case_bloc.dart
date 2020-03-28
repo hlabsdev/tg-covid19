@@ -1,8 +1,4 @@
-import 'dart:convert';
-
-import 'package:covid19_TG/models/case_model.dart';
 import 'package:covid19_TG/models/general_data_model.dart';
-import 'package:covid19_TG/models/home_data_model.dart';
 import 'package:covid19_TG/repositories/api_repository.dart';
 import 'package:covid19_TG/utils/storageutil.dart';
 import 'package:equatable/equatable.dart';

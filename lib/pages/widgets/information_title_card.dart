@@ -45,6 +45,7 @@ class InformationTitleCard extends StatelessWidget {
               child: Row(
                   mainAxisAlignment: MainAxisAlignment.start,
                   children: <Widget>[
+                    SizedBox(width: wp(3)),
                     Icon(
                       icon,
                       size: 40,

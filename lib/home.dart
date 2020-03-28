@@ -1,8 +1,13 @@
 
+import 'package:audioplayer/audioplayer.dart';
 import 'package:covid19_TG/pages/screens/home_screen.dart';
 import 'package:covid19_TG/player/audioPrevention.dart';
+import 'package:covid19_TG/player/tous_videos.dart';
+import 'package:covid19_TG/player/videoStreamer.dart';
+import 'package:covid19_TG/player/webAudioPlayer.dart';
 import 'package:covid19_TG/theme/color/light_color.dart';
 import 'package:covid19_TG/utils/margin.dart';
+import 'package:covid19_TG/utils/url_loader.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter/scheduler.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
@@ -13,7 +18,6 @@ import 'package:line_icons/line_icons.dart';
 import 'blocs/blocs.dart';
 import 'pages/screens/guide.dart';
 import 'pages/screens/nouvelles.dart';
-import 'pages/screens/auto_test.dart';
 
 class Home extends StatefulWidget {
   @override
@@ -44,7 +48,8 @@ class _HomeState extends State<Home> {
         HomeScreen(),
         NewsPage(),
         InformationScreen(),
-//        SettingsPage(),
+        TousLesVideos(),
+//        VideoStreamer(),
         AudioPrevention(),
       ],
     );
@@ -82,6 +87,7 @@ class _HomeState extends State<Home> {
                         TextStyle(fontSize: 18, color: Color(0xff989CAC)),
                   ),
                 ),
+
               ],
             ),
           ),
@@ -114,7 +120,7 @@ class _HomeState extends State<Home> {
                   ),
                   GButton(
                     icon: LineIcons.newspaper_o,
-                    text: 'Medias',
+                    text: 'Infos',
                     backgroundColor: CardColors.cyan,
                   ),
                   GButton(
@@ -122,15 +128,15 @@ class _HomeState extends State<Home> {
                     text: 'Guides',
                     backgroundColor: CardColors.blue,
                   ),
-                  /*GButton(
-                    icon: LineIcons.medkit,
-                    text: 'Test',
+                  GButton(
+                    icon: LineIcons.refresh,
+                    text: 'Med',
                     backgroundColor: CardColors.green,
 //                    active: true,
-                  ),*/
+                  ),
                   GButton(
-                    icon: LineIcons.hand_grab_o,
-                    text: 'Infos',
+                    icon: LineIcons.forward,
+                    text: 'Medias',
                     backgroundColor: CardColors.cyan,
 //                    active: true,
                   ),

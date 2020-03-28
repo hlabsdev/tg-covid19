@@ -104,7 +104,7 @@ class NewsCard extends StatelessWidget {
                               height: screenHeight(context, percent: 0.21),
                               decoration: BoxDecoration(
                                   color: Colors.grey[200],
-                                  borderRadius: BorderRadius.circular(10),
+                                  borderRadius: BorderRadius.only(topRight: Radius.circular(10.0), bottomRight: Radius.circular(10.0)),
                                   image: newsItem?.image != null
                                       ? DecorationImage(
                                       fit: BoxFit.cover,
@@ -207,7 +207,7 @@ class NewsCard extends StatelessWidget {
                               height: screenHeight(context, percent: 0.21),
                               decoration: BoxDecoration(
                                   color: Colors.grey[200],
-                                  borderRadius: BorderRadius.circular(10),
+                                  borderRadius: BorderRadius.only(topRight: Radius.circular(10.0), bottomRight: Radius.circular(10.0)),
                                   image: newsItem?.image != null
                                       ? DecorationImage(
                                       fit: BoxFit.cover,

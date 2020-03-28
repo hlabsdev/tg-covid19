@@ -1,16 +1,13 @@
-import 'package:covid19_TG/pages/screens/doli.dart';
-import 'package:covid19_TG/pages/screens/etat_modial.dart';
 import 'package:covid19_TG/pages/screens/list_prev.dart';
 import 'package:covid19_TG/pages/screens/list_prop.dart';
 import 'package:covid19_TG/pages/screens/que_faire.dart';
-import 'package:covid19_TG/pages/screens/risquy_zone.dart';
 import 'package:covid19_TG/pages/screens/list_sympt.dart';
 import 'package:covid19_TG/pages/widgets/information_title_card.dart';
 import 'package:covid19_TG/theme/color/light_color.dart';
 import 'package:flutter/material.dart';
 import 'package:line_icons/line_icons.dart';
 import 'package:responsive_screen/responsive_screen.dart';
-//import 'package:';
+import 'package:covid19_TG/utils/url_loader.dart';
 
 class InformationScreen extends StatefulWidget {
   @override
@@ -42,7 +39,8 @@ class _InformationScreenState extends State<InformationScreen>
                     iconColor: CardColors.blue,
                     subTitle: 'Comment le Covid-19 se propage',
                     title: 'Propagation',
-                  )),
+                  )
+              ),
               SizedBox(height: hp(3)),
 
               InkWell(
@@ -87,22 +85,21 @@ class _InformationScreenState extends State<InformationScreen>
                   title: 'Que faire',
                 ),
               ),
-
               SizedBox(height: hp(3)),
+
               InkWell(
                 onTap: () {
-                  Navigator.push(context,
-                      MaterialPageRoute(builder: (context) => new Dolli()));
+                  ouvreNavigateur("https://dolli-app.com");
                 },
                 child: InformationTitleCard(
-                  icon: LineIcons.hand_grab_o,
+                  icon: LineIcons.recycle,
                   iconColor: CardColors.green,
                   subTitle: "Une plateforme d'entraide ",
                   title: 'Doli',
                 ),
               ),
-
               SizedBox(height: hp(3)),
+
               InkWell(
 //                onTap: () {
 //                  Navigator.push(context,
@@ -111,23 +108,25 @@ class _InformationScreenState extends State<InformationScreen>
                 child: InformationTitleCard(
                   icon: LineIcons.bell,
                   iconColor: CardColors.red,
-                  subTitle: "Les zones a eviter imperativement !",
+                  subTitle: "Les zones a eviter imperativement!",
                   title: 'Les zones a risques',
                 ),
+                highlightColor: Colors.black12,
               ),
               SizedBox(height: hp(3)),
 //
               SizedBox(height: hp(3)),
               InkWell(
                 onTap: () {
-                  Navigator.push(context,
-                      MaterialPageRoute(builder: (context) => new Monde()));
+//                  Navigator.push(context,
+//                      MaterialPageRoute(builder: (context) => new Monde()));
+                  ouvreNavigateur("https://covidvisualizer.com");
                 },
                 child: InformationTitleCard(
                   icon: LineIcons.globe,
                   iconColor: CardColors.blue,
                   subTitle: "Les nombres dans le monde entier",
-                  title: 'Etat mondial',
+                  title: 'Les chiffres mondial',
                 ),
               ),
               SizedBox(height: hp(3)),
@@ -136,6 +135,7 @@ class _InformationScreenState extends State<InformationScreen>
           )),
     );
   }
+
 
   @override
   bool get wantKeepAlive => true;
