@@ -27,7 +27,7 @@ class InformationTitleCard extends StatelessWidget {
 //      padding: EdgeInsets.all(15),
       //margin: EdgeInsets.all(15),
       decoration: BoxDecoration(
-        color: LightColor.cardBackground,
+        color: LightColor.lightGrey,
         borderRadius: BorderRadius.circular(5),
         boxShadow: [
           new BoxShadow(
@@ -59,13 +59,13 @@ class InformationTitleCard extends StatelessWidget {
                         SizedBox(height: hp(3)),
                         Text(title,
                             style: AppTheme.h2Style.copyWith(
-                                color: LightColor.darkgrey,
+                                color: LightColor.titleTextColor,
                                 fontWeight: FontWeight.bold,
                                 fontSize: 15)),
                         SizedBox(height: hp(2)),
                         Text(subTitle,
                             style: AppTheme.h2Style.copyWith(
-                                color: LightColor.darkgrey.withOpacity(0.5),
+                                color: LightColor.subTitleTextColor.withOpacity(0.5),
                                 fontSize: 15))
                       ],
                     )
