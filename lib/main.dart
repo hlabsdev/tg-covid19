@@ -1,6 +1,7 @@
 import 'package:covid19_TG/repositories/repositories.dart';
 import 'package:covid19_TG/home.dart';
 import 'package:flutter/material.dart';
+import 'package:flutter/services.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
 
 import 'blocs/blocs.dart';
@@ -37,7 +38,6 @@ class MyApp extends StatelessWidget {
         return MaterialApp(
           debugShowCheckedModeBanner: false,
           theme: ThemeData(
-            primarySwatch: Colors.blue,
           ),
           home: BlocProvider(
             create: (context) => CaseBloc(apiRepository: apiRepository),
@@ -45,6 +45,7 @@ class MyApp extends StatelessWidget {
             lazy: true,
           ),
         );
+        SystemChrome.setEnabledSystemUIOverlays ([]);
       },
     );
   }

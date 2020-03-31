@@ -10,13 +10,13 @@ class TousLesVideos extends StatefulWidget {
 
 class _TousLesVideosState extends State<TousLesVideos> {
   final List<Video> items = new List();
-
-  Future refreshList() async {
+  var refreshKey = GlobalKey<RefreshIndicatorState>();
+  Future<TousLesVideos> refreshList() async {
     await Future.delayed(Duration(seconds: 2));
     setState(() {
       final List<Video> items = new List();
     });
-    return items;
+    return this.widget;
   }
 
   @override
@@ -25,7 +25,7 @@ class _TousLesVideosState extends State<TousLesVideos> {
     setState(() {
       items.add(new Video('http://linkedbyair.net/bin/city.mp4'));
       items.add(new Video('http://linkedbyair.net/bin/clauswinter.mp4'));
-      items.add(new Video('https://youtu.be/HitHuhclWtg'));
+      items.add(new Video('http://192.168.1.64:8000/uploads/videos/flutter-local-authentication-fingerprint-and-faceid-dart-packages-5e81e36c73479276197529.mp4'));
     });
   }
 
@@ -33,6 +33,7 @@ class _TousLesVideosState extends State<TousLesVideos> {
   Widget build(BuildContext context) {
     return Scaffold(
         body: RefreshIndicator(
+          key: refreshKey,
           onRefresh: refreshList,
           child: Center(
             child: ListView.builder(
